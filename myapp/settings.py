@@ -1,3 +1,2 @@
-from decouple import config
-import os
-ALLOWED_HOSTS = ['*']
+from decouple import config, Csv
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
